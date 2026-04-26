@@ -10,7 +10,7 @@
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>SqliteBlast</PackageId>
-        <Version>0.1.0</Version>
+        <Version>1.0.0</Version>
         <Authors>Peter van de Pas</Authors>
         <Description>SqliteBlast — local SQLite-backed storage for .NET scripts and apps. Sibling to SecretBlast / AzureBlast / NetworkBlast in the Blast family. Thin wrapper over Microsoft.Data.Sqlite with parameter binding, typed query results, transactions, a directory-based migration runner, and a vault-aware resolver path.</Description>
         <PackageTags>sqlite;data;database;local;migrations;blast</PackageTags>

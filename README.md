@@ -10,7 +10,7 @@
 
 ---
 
-> ✅ **Status:** 0.1 — connection management, parameterised execute / query, typed row mapping, transactions, directory-based migrations, vault-aware resolver path.
+> ✅ **Status:** 1.0 — full feature set: connection management, parameterised execute / query, typed row mapping, transactions, directory-based migrations, vault-aware resolver path. 31 tests green, .NET 10.
 
 ---
 
@@ -37,7 +37,7 @@ dotnet add package SqliteBlast
 ## 🚀 Script Quick-Start
 
 ```csharp
-#r "nuget: SqliteBlast, 0.1.0"
+#r "nuget: SqliteBlast, 1.0.0"
 using SqliteBlast;
 
 using var db = SqliteBlastFactory.Open("./notes.db");
