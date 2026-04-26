@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SqliteBlast.Tests/SqliteBlast.Tests.csproj" />
+  <Project Path="SqliteBlast/SqliteBlast.csproj" />
+</Solution>
