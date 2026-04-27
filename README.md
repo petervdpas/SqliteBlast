@@ -200,6 +200,33 @@ public static class ServiceCollectionExtensions
 
 ---
 
+## 🤖 AI assistants
+
+This assembly carries the **Blast.PrimaryFacade** convention: an
+`[AssemblyMetadata("Blast.PrimaryFacade", "...")]` attribute names the
+canonical front-door type(s) of the package, so AI helpers (e.g.
+TaskBlaster's script assistant) can identify the entry points without
+scanning every public type.
+
+For SqliteBlast the front doors are:
+
+| Type | Purpose |
+|------|---------|
+| `SqliteBlast.SqliteStore` | The store interface: `Execute`, `Query<T>`, `BeginTransaction`. |
+| `SqliteBlast.SqliteBlastFactory` | One-line factories: `Open(path)`, `InMemory()`. |
+
+Read it back from a loaded assembly via reflection:
+
+```csharp
+var facade = typeof(SqliteBlast.SqliteStore).Assembly
+    .GetCustomAttributes<AssemblyMetadataAttribute>()
+    .FirstOrDefault(a => a.Key == "Blast.PrimaryFacade")?.Value;
+```
+
+The value is a hint for tooling; consumers don't need to read it.
+
+---
+
 ## 📜 License
 
 [MIT](https://opensource.org/licenses/MIT)
